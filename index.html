@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <div class="count">
+            <h1> Counter App</h1>
+            <p id="text">0</p>
+            <button id="sub">- Subtract</button>
+            <button id="add">+ Addition</button>
+            <button id="re">× Reset</button>
+        </div>
+
+    </section>
+   
+    <script>
+        var i=0;
+         var a=document.getElementById("sub");
+         var b=document.getElementById("text");
+         var c=document.getElementById("add");
+         var d=document.getElementById("re")
+         a.addEventListener('click', function(){
+            i--;
+            b.innerHTML=i;
+            if(i<0){
+                b.style.color="red";
+            }
+            
+         })
+         c.addEventListener('click', function(){
+            i++;
+            b.innerHTML=i;
+            if(i>0){
+                b.style.color="blue";
+            }
+            
+         })
+
+         d.addEventListener('click', function(){
+            i=0
+            b.innerHTML=i;
+            b.style.color="green";
+            
+         })
+
+
+    </script>
+</body>
+</html>
